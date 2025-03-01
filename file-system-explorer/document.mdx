@@ -1,0 +1,33 @@
+## **Node.js `fs` (File System) Module – Folder Operations**  
+
+The **`fs` (File System)** module in Node.js provides functionalities to interact with the file system, including creating, reading, writing, deleting, and modifying files and folders. It supports **both synchronous and asynchronous methods**, where:  
+- **Synchronous methods** (`fs.methodSync`) block execution until the operation completes.  
+- **Asynchronous methods** (`fs.method`) execute non-blocking operations using callbacks.  
+
+---
+
+
+| **Operation**             | **Synchronous Method**                          | **Asynchronous Method**                         |
+|---------------------------|------------------------------------------------|------------------------------------------------|
+| **📂 Folder Operations**  |                                                |                                                |
+| Create Folder             | `fs.mkdirSync(path)`                           | `fs.mkdir(path, callback)`                      |
+| Check Folder Exists       | `fs.existsSync(path)`                          | `fs.access(path, callback)`                     |
+| Read Folder Contents      | `fs.readdirSync(path)`                         | `fs.readdir(path, callback)`                    |
+| Rename Folder             | `fs.renameSync(oldPath, newPath)`              | `fs.rename(oldPath, newPath, callback)`         |
+| Delete Empty Folder       | `fs.rmdirSync(path)`                           | `fs.rmdir(path, callback)`                      |
+| Delete Folder + Files     | `fs.rmSync(path, { recursive: true })`        | `fs.rm(path, { recursive: true }, callback)`   |
+| Watch Folder Changes      | `fs.watch(path, callback)`                     | `fs.watch(path, callback)`                      |
+| Change Folder Permissions | `fs.chmodSync(path, mode)`                     | `fs.chmod(path, mode, callback)`                |
+| Get Folder Metadata       | `fs.statSync(path)`                            | `fs.stat(path, callback)`                       |
+| **📄 File Operations**    |                                                |                                                |
+| Create/Write File         | `fs.writeFileSync(path, data)`                 | `fs.writeFile(path, data, callback)`           |
+| Read File Contents        | `fs.readFileSync(path, 'utf8')`                | `fs.readFile(path, 'utf8', callback)`          |
+| Append Data to File       | `fs.appendFileSync(path, data)`                | `fs.appendFile(path, data, callback)`          |
+| Rename File               | `fs.renameSync(oldPath, newPath)`              | `fs.rename(oldPath, newPath, callback)`        |
+| Delete File               | `fs.unlinkSync(path)`                          | `fs.unlink(path, callback)`                     |
+| Check File Exists         | `fs.existsSync(path)`                          | `fs.access(path, callback)`                     |
+| Watch File Changes        | `fs.watchFile(path, callback)`                 | `fs.watch(path, callback)`                      |
+| Copy File                 | `fs.copyFileSync(src, dest)`                   | `fs.copyFile(src, dest, callback)`             |
+| Change File Permissions   | `fs.chmodSync(path, mode)`                     | `fs.chmod(path, mode, callback)`               |
+| Get File Metadata         | `fs.statSync(path)`                            | `fs.stat(path, callback)`                      |
+

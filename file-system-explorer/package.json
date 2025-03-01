@@ -1,0 +1,11 @@
+{
+  "name": "file-system-explorer",
+  "version": "1.0.0",
+  "description": "This project is done for hands-on experience with file handling operations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
